@@ -1,0 +1,1 @@
+INSERT INTO user (name, voice_pattern) VALUES ("太郎", 0);

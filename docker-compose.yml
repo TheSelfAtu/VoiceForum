@@ -1,0 +1,51 @@
+version: '3.7'
+services:
+  fast_api_app:
+    container_name: fast_api_app
+    build:
+      context: ./docker/construct_app
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app/backend:/app
+    environment:
+      - PORT=8000      
+    entrypoint: /start-reload.sh
+    # links:
+    #   - mysql
+
+  # nginx:
+  #   container_name: nginx
+  #   image: nginx:alpine
+  #   depends_on:
+  #     # `app`サービス（コンテナ）が先に起動している必要があるので`depends_on`を指定しておく
+  #     - app
+  #   ports:
+  #     # ポートマッピング： "ホストOSのポート:コンテナ(Nginx)のポート"
+  #     - "80:80"
+  #   volumes:
+  #     # volumeマウント： "ホストOSのパス:コンテナにおけるパス"
+  #     - ./web/conf.d:/etc/nginx/conf.d
+  #   networks:
+  #     - nginx_network
+
+  # MySQL
+  # mysql:
+  #   container_name: "db"
+  #   # path配下のDockerfile読み込み
+  #   build: ./docker/construct_db
+  #   # コンテナが落ちたら再起動する
+  #   restart: always
+  #   tty: true
+  #   environment:
+  #     MYSQL_DATABASE: mysql
+  #     MYSQL_USER: user
+  #     MYSQL_PASSWORD: root # ユーザのパスワード
+  #     MYSQL_ROOT_PASSWORD: root # ルートパスワード
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - ./docker/construct_db/initdb.d:/docker-entrypoint-initdb.d # 定義どおりにテーブル作成
+  #     - ./docker/construct_db/conf.d:/etc/mysql/conf.d # MySQLの基本設定(文字化け対策)
+  #     - ./log/construct_db:/var/log/mysql # ログの保存
