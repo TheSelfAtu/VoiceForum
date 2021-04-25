@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import './scss/index.scss';
+import './scss/app.scss';
 import { Navbar } from "./components/organisms/Navbar/index";
 import { PostMessage } from "./components/pages/PostMessage";
 import { MessagesList } from "./components/pages/MessagesList";

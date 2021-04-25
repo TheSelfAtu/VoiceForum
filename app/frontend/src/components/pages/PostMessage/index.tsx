@@ -23,6 +23,7 @@ async function getAudio(){
   const audioCtx = new AudioContext();
   // マイクから音声を取得する
   const stream = await navigator.mediaDevices.getUserMedia({audio: true});
+  console.log(stream,audioCtx);
   const input  = audioCtx.createMediaStreamSource(stream);
   // 音声の解析を行うAnalyserNodeを作成する
   const analyzer = audioCtx.createAnalyser();
