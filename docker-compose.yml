@@ -15,20 +15,20 @@ services:
     # links:
     #   - mysql
 
-  # nginx:
-  #   container_name: nginx
-  #   image: nginx:alpine
-  #   depends_on:
-  #     # `app`サービス（コンテナ）が先に起動している必要があるので`depends_on`を指定しておく
-  #     - app
-  #   ports:
-  #     # ポートマッピング： "ホストOSのポート:コンテナ(Nginx)のポート"
-  #     - "80:80"
-  #   volumes:
-  #     # volumeマウント： "ホストOSのパス:コンテナにおけるパス"
-  #     - ./web/conf.d:/etc/nginx/conf.d
-  #   networks:
-  #     - nginx_network
+  nginx:
+    build:
+      context: ./docker/construct_nginx      # Dockerfile保存場所
+      dockerfile: Dockerfile    # Dockerfileファイル名
+    container_name: nginx
+    image: nginx:latest
+    depends_on:
+      # `fast_api_app`サービス（コンテナ）が先に起動している必要があるので`depends_on`を指定しておく
+      - fast_api_app
+    ports:
+      # ポートマッピング： "ホストOSのポート:コンテナ(Nginx)のポート"
+      - "80:80"
+    # networks:
+    #   - nginx_network
 
   # MySQL
   # mysql:
