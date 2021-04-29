@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Object
+   ========================================================================== */
+
+/* utility
+   ----------------------------------------------------------------- */
+
+/**
+ * flex box を使用した横並び
+ */
+ .flexbox {
+    display: flex;
+    align-items: center; /*上下中央よせ*/
+}
+
+.flexbox--space-between {
+    @extend .flexbox;
+    justify-content: space-between;
+}
+
+.flexbox--center {
+    @extend .flexbox;
+    justify-content: center;
+}
+.flexbox--end {
+    @extend .flexbox;
+    justify-content: flex-end;
+}
+
+.flexbox--column {
+    display: flex;
+    align-items: center; /*上下中央よせ*/
+    justify-content: center;
+    flex-flow: column;
+}

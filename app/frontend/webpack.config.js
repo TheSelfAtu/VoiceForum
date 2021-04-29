@@ -8,7 +8,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { exclude: /node_modules/, test: /\.(ts|tsx)$/, use: "ts-loader" },
+      { exclude: [path.resolve(__dirname, "node_modules/"),/\node_modules$/], test: /\.(ts|tsx)$/, use: "ts-loader" },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],

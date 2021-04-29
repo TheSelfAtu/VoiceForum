@@ -1,0 +1,28 @@
+.btn-solid {
+  border: 2px solid;
+}
+
+.btn--circle {
+  border-radius: 50%;
+  line-height: 100px;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+}
+
+.btn--shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+
+.btn-radius-solid {
+    background: #f1e767;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
+    background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%);
+    background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
+  }

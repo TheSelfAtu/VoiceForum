@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './scss/app.scss';
-import { Navbar } from "./components/organisms/Navbar/index";
+import "./scss/app.scss";
+import { Navbar } from "./components/organisms/Navbar";
 import { PostMessage } from "./components/pages/PostMessage";
 import { MessagesList } from "./components/pages/MessagesList";
 
@@ -11,11 +11,11 @@ export function App(): JSX.Element {
     <Router>
       <Navbar></Navbar>
       <Switch>
-        {/* <Route path="/">
-          <MessagesList></MessagesList>
-        </Route> */}
-        <Route path="/">
+        <Route path="/post-message">
           <PostMessage></PostMessage>
+        </Route>
+        <Route path="/">
+          <MessagesList></MessagesList>
         </Route>
       </Switch>
     </Router>

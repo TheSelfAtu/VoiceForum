@@ -1,0 +1,23 @@
+/* Material iconsを利用する */
+.micIcon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 500px;  /* 推奨サイズ */
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  line-height: 1;
+  text-transform: none;
+ 
+  /* WebKitブラウザサポート */
+  -webkit-font-smoothing: antialiased;
+  /* Chrome、Safariサポート */
+  text-rendering: optimizeLegibility;
+ 
+  /* Firefoxサポート */
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* IEサポート */
+  font-feature-settings: 'liga';
+}
