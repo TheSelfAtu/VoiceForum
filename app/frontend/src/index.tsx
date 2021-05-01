@@ -5,6 +5,7 @@ import "./scss/app.scss";
 import { Navbar } from "./components/organisms/Navbar";
 import { PostMessage } from "./components/pages/PostMessage";
 import { MessagesList } from "./components/pages/MessagesList";
+import { NavLinks } from "./components/organisms/NavLinks";
 
 export function App(): JSX.Element {
   return (
@@ -18,6 +19,7 @@ export function App(): JSX.Element {
           <MessagesList></MessagesList>
         </Route>
       </Switch>
+      <NavLinks></NavLinks>
     </Router>
   );
 }

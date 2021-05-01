@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import {NavLinks} from "../organisms/NavLinks"
 export function AudioData() {
   const [audioCtx, setAudioCtx] = useState<null | AudioContext>(null);
   const [
@@ -59,12 +59,15 @@ export function AudioData() {
           if (MediaRecorderInstance && audioCtx) {
             await setAudioElement(createAudioElement(audioChunks));
             const audioElementSrc = createAudioElement(audioChunks);
-            replayAudio(audioCtx, audioElementSrc);
+            if (audioElementSrc) {
+              replayAudio(audioCtx, audioElementSrc);
+            }
           }
         }}
       >
         再生
       </button>
+      <NavLinks></NavLinks>
     </div>
   );
 }
