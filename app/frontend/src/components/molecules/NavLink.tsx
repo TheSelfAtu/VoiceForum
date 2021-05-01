@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 interface NavLinkProps {
   link: string;
   description: string;
-  icon: OverridableComponent<any>;
+  iconComponent: JSX.Element;
 }
 
 export function NavLink(props: NavLinkProps) {
   return (
-    <Link to={props.link} className="flexbox--column">
-      {/* {props.icon} */}
+    <Link to={props.link} className="flexbox--column color--gray">
+      {props.iconComponent}
       <p>{props.description}</p>
     </Link>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {NavLinks} from "../organisms/NavLinks"
+import { NavLinks } from "../organisms/NavLinks";
 export function AudioData() {
   const [audioCtx, setAudioCtx] = useState<null | AudioContext>(null);
   const [
@@ -67,7 +67,6 @@ export function AudioData() {
       >
         再生
       </button>
-      <NavLinks></NavLinks>
     </div>
   );
 }

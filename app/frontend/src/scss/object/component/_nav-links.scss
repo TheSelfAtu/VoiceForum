@@ -1,7 +1,13 @@
+.nav-links-wrapper {
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid gray;
+}
 .nav-links {
-    display: flex;
-    // font-weight: bold;
-    li {
-        margin-left: 15px;
-    }
+  max-width: 767px;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
