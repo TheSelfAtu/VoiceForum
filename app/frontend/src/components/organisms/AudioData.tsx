@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLinks } from "../organisms/NavLinks";
+import { ImageButton } from "../molecules/ImageButton";
 export function AudioData() {
   const [audioCtx, setAudioCtx] = useState<null | AudioContext>(null);
   const [
@@ -24,12 +24,14 @@ export function AudioData() {
   }, [audioChunks]);
   return (
     <div>
-      <button className="recording-btn btn--circle btn--shadow position--relative">
+      {/* <button className="recording-btn btn--circle btn--shadow position--relative">
         <img
           src="/static/image/mic_black_24dp.svg"
           className="size--icon position--center"
         ></img>
-      </button>
+      </button> */}
+      <button></button>
+      <ImageButton description="Rec" onClick={}></ImageButton>
       <button
         className="btn-solid"
         onClick={() => {
