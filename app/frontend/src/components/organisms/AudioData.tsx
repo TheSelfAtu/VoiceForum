@@ -31,7 +31,7 @@ export function AudioData() {
         ></img>
       </button> */}
       <button></button>
-      <ImageButton description="Rec" onClick={}></ImageButton>
+      {/* <ImageButton description="Rec" ></ImageButton> */}
       <button
         className="btn-solid"
         onClick={() => {
@@ -115,7 +115,7 @@ async function createMediaRecoderInstance(
           await setChunks([e.data]);
         });
         // recorder.stopが実行された時のイベント
-        mediarecorderInstance.addEventListener("stop", function () {});
+        mediarecorderInstance.addEventListener("stop", function () { });
         resolve(mediarecorderInstance);
       })
       .catch((e) => {

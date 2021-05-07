@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./scss/app.scss";
 import { Navbar } from "./components/organisms/Navbar";
 import { PostMessage } from "./components/pages/PostMessage";
-import { MessagesList } from "./components/pages/MessagesList";
+import { SoundList } from "./components/pages/SoundList";
 import { NavLinks } from "./components/organisms/NavLinks";
 
 export function App(): JSX.Element {
@@ -16,7 +16,7 @@ export function App(): JSX.Element {
           <PostMessage></PostMessage>
         </Route>
         <Route path="/">
-          <MessagesList></MessagesList>
+          <SoundList></SoundList>
         </Route>
       </Switch>
       <NavLinks></NavLinks>
